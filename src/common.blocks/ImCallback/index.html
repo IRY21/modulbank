@@ -1,0 +1,20 @@
+<script type="text/javascript" src="../js/im-js.js"></script>
+<div class="ImCallback">
+    <p class="ImCallback-Title"><?=$_GET['zag1'];?></p>
+    <p class="ImCallback-Subtitle"><?=$_GET['zag2'];?></p>
+    <form class="ImCallback-Form FormSection" method="POST" action="/spasibo" id="form10" alt="10" data-reachgoal='<?=$_GET['reachgoal'];?>'>
+    <input name="name" class="ImCallback-Input FormSection-Input" id="name10" placeholder="Введите ваше имя">
+    <input name="phone" class="ImCallback-Input FormSection-Input masked-phone1" id="phone10" placeholder="+7 (___) ___-__-__" type="tel">
+    <input name="head_mess" type="hidden" id="head_mess10" value="<?=$_GET['headmess'];?>">
+    <input name="page_id" type="hidden" id="page_id10" value="<?=$_GET['page_id'];?>">
+    <button type="button" class="ImCallback-Btn FormSection-Btn Btn" onclick="formcheck(10, '<?=$_GET['reachgoal'];?>');">
+        <?=$_GET['btn_text'];?>
+    </button>
+    </form>
+    <div class='ImCallback-FormSpecText ProcessingPersonalDataText'>
+        Заполняя эту форму, вы даете согласие на<br>
+        <a href="/im-blocks/politic.php" class="ProcessingPersonalDataText-Link fancybox.ajax">
+            обработку ваших персональных данных
+        </a>
+    </div>
+</div>

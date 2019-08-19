@@ -1,0 +1,13 @@
+.DropDownLink
+  position: relative
+  &-Icon
+    content: ''
+    width: 7px
+    height: 4px
+    margin-left: 5px
+    transition: transform ease-in-out 0.2s
+
+.DropDownLink:hover
+  .DropDownLink
+    &-Icon
+      transform: translateY(2px)

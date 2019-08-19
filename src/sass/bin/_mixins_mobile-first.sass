@@ -1,0 +1,15 @@
+@mixin mf($class)
+  @if $class == xxs ///* Extra small devices (phones, 320px and down) */
+    @media (max-width: 320px) { @content; }
+  @else if $class == xs ///* Small devices (portrait tablets and large phones, 480px and up) */
+    @media (min-width: 480px) { @content; }
+  @else if $class == sx ///* Small devices (portrait tablets and large phones, 575px and up) */
+    @media (min-width: 575px) { @content; }
+  @else if $class == sm ///* Medium devices (landscape tablets, 768px and up) */
+    @media (min-width: 768px) { @content; }
+  @else if $class == sl ///* Large devices (laptops/desktops, 992px and up) */
+    @media (min-width: 992px) { @content; }
+  @else if $class == lg ///* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media (min-width: 1200px) { @content; }
+  @else if $class == ret
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx){ @content; }

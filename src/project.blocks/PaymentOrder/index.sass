@@ -1,0 +1,25 @@
+.PaymentOrder
+  width: 100%
+  height: 100%
+  &-Container
+    width: 100%
+    max-width: 545px
+    min-width: 545px
+    margin: 0 auto
+  &-Head
+    height: 60px
+  &-Body
+    height: calc(100% - 120px)
+    overflow-y: scroll
+    &::-webkit-scrollbar
+      width: 6px
+    &::-webkit-scrollbar-track
+      background: rgba(0, 0, 0, 0.11)
+      border-radius: 100px
+    &::-webkit-scrollbar-thumb
+      background: rgba(0, 0, 0, 0.15)
+      border-radius: 100px
+  &-Footer
+    height: 60px
+    .PaymentOrder-Container
+      height: 100%

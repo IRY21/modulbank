@@ -1,0 +1,270 @@
+body {
+    overflow-x: hidden;
+}
+
+.DefmenuWrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.DefmenuContainer {
+    position: relative;
+    left: 0;
+    -webkit-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.Defmenu {
+    width: 250px;
+    height: 100%;
+    background: #191918;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    z-index: 9999;
+    overflow: hidden;
+    -webkit-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.Defmenu:after {
+    content: '';
+    position: absolute;
+    box-shadow: 0 0 10px #000;
+    top: 0;
+    bottom: 0;
+    right: -.1rem;
+    width: .1rem;
+}
+
+.Defmenu_open .Defmenu {
+    left: 0;
+}
+
+.Defmenu_open .DefmenuContainer {
+    left: 250px;
+}
+
+.DefmenuOverlay {
+    display: none;
+}
+
+.Defmenu_open .DefmenuOverlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9998;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-animation: fade 500ms;
+    -moz-animation: fade 500ms;
+    -o-animation: fade 500ms;
+    animation: fade 500ms;
+}
+
+.DefmenuContent {
+    height: 100%;
+    background: #333232;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.DefmenuContent::-webkit-scrollbar {
+    width: 5px;
+}
+
+.DefmenuContent::-webkit-scrollbar-thumb {
+    background-color: #656565;
+    border-radius: 0;
+}
+
+.DefmenuContent::-webkit-scrollbar-thumb:hover {
+    background-color: #c4c4c4;
+}
+
+.DefmenuContent::-webkit-scrollbar-track {
+    background-color: #ededed;
+}
+
+.DefmenuNav {
+    width: 100%;
+    padding: 0px;
+    list-style: none;
+    background: #ffffff;
+}
+
+.DefmenuNav-Link {
+    padding: 22px 18px 23px 23px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #494747;
+    border-top: 1px solid #e9eaec;
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+
+.DefmenuNav-Link:after {
+    content: url("../img/defmenu-nav__link-arrow.png");
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    right: 19px;
+}
+
+.DefmenuBtn-Container_fixed{
+    left: 0;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+.Defmenu_open .DefmenuBtn-Container_fixed{
+    left: 250px;
+}
+
+.DefmenuBtn {
+    width: 49px;
+    height: 47px;
+    padding: 16px 14px;
+    background: red;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-appearance: none;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    position: relative;
+    -webkit-transition: all ease-in-out .4s;
+    -o-transition: all ease-in-out .4s;
+    -moz-transition: all ease-in-out .4s;
+    transition: all ease-in-out .4s;
+    z-index: 9999;
+}
+
+.DefmenuBtn-Line {
+    width: 21px;
+    height: 3px;
+    margin-bottom: 3px;
+    background-color: #ffffff;
+    border-radius: 25%;
+    -webkit-transition: all ease-in-out .4s;
+    -o-transition: all ease-in-out .4s;
+    -moz-transition: all ease-in-out .4s;
+    transition: all ease-in-out .4s;
+    display: inline-block;
+    position: static;
+}
+
+.DefmenuBtn-Line:last-child {
+    margin-bottom: 0;
+}
+
+.DefmenuBtn_open .DefmenuBtn-Line:nth-child(1) {
+    position: absolute;
+    top: -webkit-calc(50% - 4px);
+    top: calc(50% - 4px);
+    left: -webkit-calc(50% - 13px);
+    left: calc(50% - 13px);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
+
+.DefmenuBtn_open .DefmenuBtn-Line:nth-child(2) {
+    display: none;
+}
+
+.DefmenuBtn_open .DefmenuBtn-Line:nth-child(3) {
+    position: absolute;
+    top: -webkit-calc(50% + 3px);
+    top: calc(50% + 3px);
+    right: -webkit-calc(50% - 9px);
+    right: calc(50% - 9px);
+    -webkit-transform: rotate(-45deg) translate(4.5px, -5.5px);
+    -ms-transform: rotate(-45deg) translate(4.5px, -5.5px);
+    transform: rotate(-45deg) translate(4.5px, -5.5px); }
+
+/*
+.DefmenuBtn {
+    width: 45px;
+    height: 39px;
+    background: red;
+    border: 0;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.DefmenuBtn span {
+    width: 27px;
+    height: 4px;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    left: -webkit-calc(50% - 14px);
+    left: -moz-calc(50% - 14px);
+    left: calc(50% - 14px);
+    -webkit-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    display: block;
+}
+
+.DefmenuBtn span:nth-child(1) {
+    top: -webkit-calc(50% - 10px);
+    top: -moz-calc(50% - 10px);
+    top: calc(50% - 10px);
+}
+
+.DefmenuBtn span:nth-child(2) {
+    top: -webkit-calc(50% - 2px);
+    top: -moz-calc(50% - 2px);
+    top: calc(50% - 2px);
+}
+
+.DefmenuBtn span:nth-child(3) {
+    top: -webkit-calc(50% + 6px);
+    top: -moz-calc(50% + 6px);
+    top: calc(50% + 6px);
+}
+
+.DefmenuBtn_open span:nth-child(1) {
+    top: 18px !important;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.DefmenuBtn_open span:nth-child(2) {
+    opacity: 0;
+    display: none;
+}
+
+.DefmenuBtn_open span:nth-child(3) {
+    top: 18px !important;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}*/

@@ -1,0 +1,29 @@
+.File_theme_link
+  .File
+    &-Link
+      height: 30px
+      background-color: #ffffff
+      font-size: 14px
+      color: #48c480
+      border: 1px solid rgba(72, 196, 128, 0.5)
+      border-radius: 3px
+      display: flex
+      align-items: center
+      justify-content: center
+      transition: background-color ease-in-out .25s, color ease-in-out .25s
+      cursor: pointer
+      position: relative
+      &:hover
+        background-color: #48c480
+        color: #ffffff
+    &-Control
+      display: none
+  &.attached
+    .File-Link
+      background-color: #e6e6e6
+      font-size: 0
+      color: #898989
+      border-color: #e6e6e6
+      &:before
+        content: 'Файл прикреплен'
+        font-size: 14px

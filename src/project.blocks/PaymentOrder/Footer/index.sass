@@ -1,0 +1,59 @@
+.PaymentOrderFooter
+  background: #FFFFFF
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.239102), 0px 0px 15px rgba(0, 0, 0, 0.0869282)
+  &-ControlsWrap
+    height: 100%
+    display: flex
+    justify-content: space-between
+  &-Control
+
+.PaymentOrderControl
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  &-Icon
+    margin-right: 10px
+    fill: #000000
+    transition: transform ease-in-out .2s
+  &-Name
+    font-size: 14px
+    color: #2c2f32
+
+.PaymentOrderControl
+  &_repeat
+    .PaymentOrderControl
+      &-Icon
+        width: 20px
+        height: 20px
+    &:hover
+      .PaymentOrderControl
+        &-Icon
+          transform: rotate(90deg)
+  &_bookmark
+    .PaymentOrderControl
+      &-Icon
+        width: 21px
+        height: 20px
+    &:hover
+      .PaymentOrderControl
+        &-Icon
+          transform: scale(1.2)
+  &_ask
+    .PaymentOrderControl
+      &-Icon
+        width: 22px
+        height: 20px
+    &:hover
+      .PaymentOrderControl
+        &-Icon
+          transform: translateX(3px)
+  &_actions
+    .PaymentOrderControl
+      &-Icon
+        width: 22px
+        height: 4px
+    &:hover
+      .PaymentOrderControl
+        &-Icon
+          transform: rotate(90deg)

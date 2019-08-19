@@ -1,0 +1,320 @@
+
+<!doctype html>
+<html lang="ru">
+<head>
+
+    <meta charset="utf-8">
+
+    <title>ModulBank test</title>
+    <meta name="description" content="">
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+
+    <link rel="preload" href="/font/RobotoLight/RobotoLight.woff" as="font" crossorigin="anonymous" type="font/woff">
+    <link rel="preload" href="/font/RobotoRegular/RobotoRegular.woff" as="font" crossorigin="anonymous" type="font/woff">
+    <link rel="preload" href="/font/RobotoMedium/RobotoMedium.woff" as="font" crossorigin="anonymous" type="font/woff">
+    <link rel="preload" href="/font/FiraSansMedium/FiraSansMedium.woff" as="font" crossorigin="anonymous" type="font/woff">
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap&subset=cyrillic-ext,latin-ext" rel="stylesheet">
+    -->
+    <link rel="stylesheet" href="/css/libs.min.css">
+    <link rel="stylesheet" href="/css/main.min.css">
+
+    <script>
+        (function() {
+            // Optimization for Repeat Views
+            if( sessionStorage.criticalFoftFontsLoaded ) {
+                document.documentElement.className += " fonts-stage-1";
+                return;
+            }
+            // FontFaceObserver https://github.com/bramstein/fontfaceobserver
+            (function(){function e(e,t){document.addEventListener?e.addEventListener("scroll",t,!1):e.attachEvent("scroll",t)}function t(e){document.body?e():document.addEventListener?document.addEventListener("DOMContentLoaded",function t(){document.removeEventListener("DOMContentLoaded",t),e()}):document.attachEvent("onreadystatechange",function n(){if("interactive"==document.readyState||"complete"==document.readyState)document.detachEvent("onreadystatechange",n),e()})}function n(e){this.a=document.createElement("div"),this.a.setAttribute("aria-hidden","true"),this.a.appendChild(document.createTextNode(e)),this.b=document.createElement("span"),this.c=document.createElement("span"),this.h=document.createElement("span"),this.f=document.createElement("span"),this.g=-1,this.b.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.c.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.f.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.h.style.cssText="display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;",this.b.appendChild(this.h),this.c.appendChild(this.f),this.a.appendChild(this.b),this.a.appendChild(this.c)}function r(e,t){e.a.style.cssText="max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font:"+t+";"}function i(e){var t=e.a.offsetWidth,n=t+100;return e.f.style.width=n+"px",e.c.scrollLeft=n,e.b.scrollLeft=e.b.scrollWidth+100,e.g!==t?(e.g=t,!0):!1}function s(t,n){function r(){var e=s;i(e)&&null!==e.a.parentNode&&n(e.g)}var s=t;e(t.b,r),e(t.c,r),i(t)}function o(e,t){var n=t||{};this.family=e,this.style=n.style||"normal",this.weight=n.weight||"normal",this.stretch=n.stretch||"normal"}function l(){if(null===a){var e=document.createElement("div");try{e.style.font="condensed 100px sans-serif"}catch(t){}a=""!==e.style.font}return a}function c(e,t){return[e.style,e.weight,l()?e.stretch:"","100px",t].join(" ")}var u=null,a=null,f=null;o.prototype.load=function(e,i){var o=this,a=e||"BESbswy",l=i||3e3,h=(new Date).getTime();return new Promise(function(e,i){null===f&&(f=!!window.FontFace);if(f){var p=new Promise(function(e,t){function n(){(new Date).getTime()-h>=l?t():document.fonts.load(c(o,o.family),a).then(function(t){1<=t.length?e():setTimeout(n,25)},function(){t()})}n()}),d=new Promise(function(e,t){setTimeout(t,l)});Promise.race([d,p]).then(function(){e(o)},function(){i(o)})}else t(function(){function t(){var t;if(t=-1!=m&&-1!=g||-1!=m&&-1!=S||-1!=g&&-1!=S)(t=m!=g&&m!=S&&g!=S)||(null===u&&(t=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),u=!!t&&(536>parseInt(t[1],10)||536===parseInt(t[1],10)&&11>=parseInt(t[2],10))),t=u&&(m==x&&g==x&&S==x||m==T&&g==T&&S==T||m==N&&g==N&&S==N)),t=!t;t&&(null!==C.parentNode&&C.parentNode.removeChild(C),clearTimeout(L),e(o))}function f(){if((new Date).getTime()-h>=l)null!==C.parentNode&&C.parentNode.removeChild(C),i(o);else{var e=document.hidden;if(!0===e||void 0===e)m=p.a.offsetWidth,g=d.a.offsetWidth,S=v.a.offsetWidth,t();L=setTimeout(f,50)}}var p=new n(a),d=new n(a),v=new n(a),m=-1,g=-1,S=-1,x=-1,T=-1,N=-1,C=document.createElement("div"),L=0;C.dir="ltr",r(p,c(o,"sans-serif")),r(d,c(o,"serif")),r(v,c(o,"monospace")),C.appendChild(p.a),C.appendChild(d.a),C.appendChild(v.a),document.body.appendChild(C),x=p.a.offsetWidth,T=d.a.offsetWidth,N=v.a.offsetWidth,f(),s(p,function(e){m=e,t()}),r(p,c(o,'"'+o.family+'",sans-serif')),s(d,function(e){g=e,t()}),r(d,c(o,'"'+o.family+'",serif')),s(v,function(e){S=e,t()}),r(v,c(o,'"'+o.family+'",monospace'))})})},"undefined"!=typeof module?module.exports=o:(window.FontFaceObserver=o,window.FontFaceObserver.prototype.load=o.prototype.load)})();
+
+            var fontASubset = new FontFaceObserver('Roboto', {
+                weight: 400
+            });
+            Promise.all([fontASubset.load()]).then(function () {
+                document.documentElement.className += " fonts-stage-1";
+                var fontA = new FontFaceObserver('FiraSans', {
+                    weight: 400
+                });
+                var fontB = new FontFaceObserver('Roboto', {
+                    weight: 300
+                });
+                var fontC = new FontFaceObserver('Roboto', {
+                    weight: 500
+                });
+                Promise.all([fontA.load(), fontB.load(), fontC.load()]).then(function () {
+                    // Optimization for Repeat Views
+                    sessionStorage.criticalFoftFontsLoaded = true;
+                });
+            });
+        })();
+    </script>
+
+
+</head>
+<body>
+
+<main class="Home">
+
+    <header class="Header">
+    <div class="Header-Body">
+        <div class="Header-Left HeaderLeft">
+            <div class="HeaderLeft-LogoSearch">
+                <a href="#" class="Logo HeaderLeft-Logo">
+                    <svg class="Logo-Img" fill="#00417B">
+                        <use
+                            xlink:href="/img/sprite.svg#logo"
+                            href="/img/sprite.svg#logo"></use>
+                    </svg>
+                </a>
+                <div class="Search HeaderLeft-Search">
+                    <svg class="Search-Icon">
+                        <use
+                            xlink:href="/img/sprite.svg#icon_search"
+                            href="/img/sprite.svg#icon_search"></use>
+                    </svg>
+                    <div class="Search-WrapControl">
+                        <span class="Search-Label">Поиск</span>
+                        <input type="text" class="Search-Control">
+                    </div>
+                </div>
+            </div>
+            <div class="HeaderLeft-Nav">
+                <nav class="Nav">
+                    <a href="#" class="Nav-Item active">
+                        Деньги
+                    </a>
+                    <a href="#" class="Nav-Item">
+                        Контакты
+                    </a>
+                    <a href="#" class="Nav-Item DropDownLink">
+                        Услуги
+                        <svg class="DropDownLink-Icon">
+                            <use
+                                xlink:href="/img/sprite.svg#icon_arrow_down"
+                                href="/img/sprite.svg#icon_arrow_down"></use>
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <div class="Header-Center HeaderCenter">
+            <div class="AddBtn HeaderCenter-AddBtn">
+                <svg class="AddBtn-Icon">
+                    <use
+                        xlink:href="/img/sprite.svg#icon_new_payment"
+                        href="/img/sprite.svg#icon_new_payment"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="Header-Right HeaderRight">
+            <div class="HeaderRight-Notification">
+                <div class="Notification">
+                    <svg class="Notification-Icon">
+                        <use
+                            xlink:href="/img/sprite.svg#icon_bell"
+                            href="/img/sprite.svg#icon_bell"></use>
+                    </svg>
+                    <div class="Notification-Num">
+                        2
+                    </div>
+                </div>
+            </div>
+            <div class="HeaderRight-Profile">
+                <div class="Profile DropDownLink">
+                    <svg class="Profile-Icon">
+                        <use
+                            xlink:href="/img/sprite.svg#icon_profile"
+                            href="/img/sprite.svg#icon_profile"></use>
+                    </svg>
+                    <span class="Profile-Text">ООО «РОДНЫЕ ПРОСТОРЫ</span>
+                    <svg class="DropDownLink-Icon">
+                        <use
+                            xlink:href="/img/sprite.svg#icon_arrow_down"
+                            href="/img/sprite.svg#icon_arrow_down"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <div class="MainSection">
+        <div class="MainSection-Slide_left">
+            <div class="PaymentOrder">
+    <div class="PaymentOrder-Head PaymentOrderHead">
+        <div class="PaymentOrderHead-Close PaymentOrderClose">
+            <svg class="PaymentOrderClose-Icon">
+                <use
+                    xlink:href="/img/sprite.svg#icon_close"
+                    href="/img/sprite.svg#icon_close"></use>
+            </svg>
+        </div>
+        <div class="PaymentOrderHead-Heading">
+            Платежное поручение № 5241234 от 23.09.2015
+        </div>
+    </div>
+    <div class="PaymentOrder-Body PaymentOrderBody">
+        <div class="PaymentOrder-Container">
+            <div class="PaymentOrderBody-Payment PaymentOrderPayment">
+                <div class="PaymentOrderPayment-Sum">
+                    – 23 500,00 ₽
+                </div>
+                <div class="PaymentOrderPayment-From">
+                    <span>со счета: </span>Расчетный счет (***012345)
+                </div>
+                <div class="PaymentOrderPayment-When">
+                    ИСПОЛНЕН, 21 июня 15:33
+                </div>
+            </div>
+            <div class="PaymentOrderBody-Card PaymentOrderCard">
+                <div class="PaymentOrderCard-Partner PaymentOrderPartner">
+                    <div class="PaymentOrderPartner-AngleWrap">
+                        <div class="PaymentOrderPartner-Angle">
+                            <div class="PaymentOrderPartner-Angle-HideShadow"></div>
+                        </div>
+                        <div class="PaymentOrderPartner-Angle-AddShadow"></div>
+                    </div>
+                    <div class="PaymentOrderPartner-Info">
+                        <div class="PaymentOrderPartner-Heading">
+                            ООО "Родные просторы
+                        </div>
+                        <div class="PaymentOrderPartner-ItemsWrap">
+                            <div class="PaymentOrderPartner-InfoItem">
+                                ИНН: 22341497819132
+                            </div>
+                            <div class="PaymentOrderPartner-InfoItem">
+                                Банк: ОАО Сбербанк
+                            </div>
+                            <div class="PaymentOrderPartner-InfoItem">
+                                БИК: 2352362365
+                            </div>
+                            <div class="PaymentOrderPartner-InfoItem">
+                                Счет: 40802810970010000395
+                            </div>
+                        </div>
+                    </div>
+                    <div class="PaymentOrderPartner-TrustabilityInfo">
+                        <div class="PaymentOrderPartner-Trustability PaymentOrderTrustability">
+                            <div class="PaymentOrderTrustability-LinkWrap">
+                                <a href="#" class="PaymentOrderTrustability-Link">
+                                    Высокая финансовая<br>
+                                    устойчивость
+                                </a>
+                            </div>
+                            <div class="PaymentOrderTrustability-Graphic ">
+                                <div class="GraphicCircle p88">
+                                    <div class="GraphicCircle-Spiner">
+                                        <span class="GraphicCircle-Num" >88</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="PaymentOrderPartner-Trustability PaymentOrderTrustability">
+                            <div class="PaymentOrderTrustability-LinkWrap">
+                                <a href="#" class="PaymentOrderTrustability-Link">
+                                    Высокая<br>
+                                    благонадежность
+                                </a>
+                            </div>
+                            <div class="PaymentOrderTrustability-Graphic">
+                                <div class="GraphicCircle">
+                                    <div class="GraphicCircle-Spiner">
+                                        <span class="GraphicCircle-Num" >100</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="PaymentOrderPartner-Trustability PaymentOrderTrustability">
+                            <div class="PaymentOrderTrustability-LinkWrap">
+                                <a href="#" class="PaymentOrderTrustability-Link">
+                                    Кредитоспособность<br>
+                                    44,5 млрд ₽
+                                </a>
+                            </div>
+                            <div class="PaymentOrderTrustability-Graphic RangeCircle">
+                                <div>
+                                    <div class="RangeCircle-Num">
+                                        1
+                                    </div>
+                                    <div class="RangeCircle-Text">
+                                        Класс
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="PaymentOrderCard-Description">
+                    Оплата за партию ромашек и одуванчиков по договору 14023-023 от 14.05.2015 г. Сумма 11430-00. В том числе НДС 18% - 1450,00 ₽
+                </div>
+            </div>
+            <div class="PaymentOrderBody-Comment">
+                Комиссия банка: 70 р.<br>
+                Размер комиссии рассчитан автоматически согласно тарифу вашей компании и является ознакомительным. Точный размер комиссии определяется после передачи платежного документа на обработку в банк.
+            </div>
+        </div>
+    </div>
+    <div class="PaymentOrder-Footer PaymentOrderFooter">
+        <div class="PaymentOrder-Container">
+            <div class="PaymentOrderFooter-ControlsWrap">
+                <div class="PaymentOrderFooter-Control PaymentOrderControl PaymentOrderControl_repeat">
+                    <svg class="PaymentOrderControl-Icon">
+                        <use
+                                xlink:href="/img/sprite.svg#icon_repeat"
+                                href="/img/sprite.svg#icon_repeat"></use>
+                    </svg>
+                    <div class="PaymentOrderControl-Name">
+                        Повторить
+                    </div>
+                </div>
+                <div class="PaymentOrderFooter-Control PaymentOrderControl PaymentOrderControl_bookmark">
+                    <svg class="PaymentOrderControl-Icon">
+                        <use
+                                xlink:href="/img/sprite.svg#icon_bookmark"
+                                href="/img/sprite.svg#icon_bookmark"></use>
+                    </svg>
+                    <div class="PaymentOrderControl-Name">
+                        В избранное
+                    </div>
+                </div>
+                <div class="PaymentOrderFooter-Control PaymentOrderControl PaymentOrderControl_ask">
+                    <svg class="PaymentOrderControl-Icon">
+                        <use
+                                xlink:href="/img/sprite.svg#icon_ask"
+                                href="/img/sprite.svg#icon_ask"></use>
+                    </svg>
+                    <div class="PaymentOrderControl-Name">
+                        Спросить
+                    </div>
+                </div>
+                <div class="PaymentOrderFooter-Control PaymentOrderControl PaymentOrderControl_actions">
+                    <svg class="PaymentOrderControl-Icon">
+                        <use
+                                xlink:href="/img/sprite.svg#icon_actions"
+                                href="/img/sprite.svg#icon_actions"></use>
+                    </svg>
+                    <div class="PaymentOrderControl-Name">
+                        Действия
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</main>
+
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

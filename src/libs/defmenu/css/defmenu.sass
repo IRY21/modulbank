@@ -1,0 +1,132 @@
+@import "../../../sass/bin/vars"
+
+body
+  overflow-x: hidden
+
+.DefmenuWrapper
+  width: 100%
+  position: relative
+  overflow: hidden
+
+.DefmenuContainer
+  position: relative
+  left: 0
+  transition: all 0.25s ease-in-out
+
+.Defmenu
+  width: 250px
+  height: 100%
+  background: #191918
+  position: fixed
+  top: 0
+  left: -250px
+  z-index: 9999
+  overflow: hidden
+  transition: all 0.25s ease-in-out
+  &:after
+    content: ''
+    position: absolute
+    box-shadow: 0 0 10px #000
+    top: 0
+    bottom: 0
+    right: -.1rem
+    width: .1rem
+
+.Defmenu_open
+  .Defmenu
+    left: 0
+  .DefmenuContainer
+    left: 250px
+
+.DefmenuOverlay
+  display: none
+
+.DefmenuOpen .DefmenuOverlay
+  display: block
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 9998
+  background-color: rgba(0, 0, 0, 0.5)
+  animation: fade 500ms
+
+.DefmenuContent
+  height: 100%
+  background: #333232
+  position: relative
+  overflow-y: auto
+  overflow-x: hidden
+  &::-webkit-scrollbar
+    width: 5px
+  &::-webkit-scrollbar-thumb
+    background-color: #656565
+    border-radius: 0
+    &:hover
+      background-color: rgb(196, 196, 196)
+  &::-webkit-scrollbar-track
+    background-color: rgb(237, 237, 237)
+
+.DefmenuNav
+  width: 100%
+  padding: 0px
+  list-style: none
+  background: #ffffff
+
+.DefmenuNav-Link
+  padding: 22px 18px 23px 23px
+  font-size: 12px
+  font-weight: 600
+  color: #494747
+  border-top: 1px solid #e9eaec
+  position: relative
+  display: block
+  text-decoration: none
+  &:after
+    content: url("../img/DefmenuNav-LinkArrow.png")
+    position: absolute
+    top: 50%
+    margin-top: -6px
+    right: 19px
+
+.DefmenuBtn-Container_fixed
+  left: 0
+  transition: all 0.25s ease-in-out
+
+.Defmenu_open .DefmenuBtn-Container_fixed
+  left: 250px
+
+.DefmenuBtn
+  width: 49px
+  height: 47px
+  padding: 16px 14px
+  background: $main-color
+  border: none
+  border-radius: 0 10px 10px 0
+  -webkit-appearance: none
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  position: relative
+  transition: all ease-in-out .4s
+  &-Line
+    width: 21px
+    height: 3px
+    margin-bottom: 3px
+    background-color: #ffffff
+    border-radius: 25%
+    transition: all ease-in-out .4s
+    display: inline-block
+    position: static
+    &:last-child
+      margin-bottom: 0
+
+.DefmenuBtn_open
+  .DefmenuBtn-Line:nth-child(1)
+    transform: rotate(45deg) translate(3px,4px)
+  .DefmenuBtn-Line:nth-child(2)
+    display: none
+  .DefmenuBtn-Line:nth-child(3)
+    transform: rotate(-45deg) translate(4.5px,-5.5px)

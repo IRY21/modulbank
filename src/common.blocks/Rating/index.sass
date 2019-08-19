@@ -1,0 +1,49 @@
+.Rating
+  margin-bottom: 12px
+
+.Rating input,
+.Rating label
+  position: relative
+  margin: -2px 
+  width: 10px
+  height: 18px
+  vertical-align: bottom
+
+  -moz-appearance: none
+  -webkit-appearance: none
+  outline: none
+
+.Rating label
+  display: none
+  margin-left: -10px
+  font-size: 0
+
+.Rating input:first-of-type
+  position: absolute
+  visibility: hidden
+
+.Rating input:first-of-type + input:checked + label
+  display: inline-block
+  z-index: 1
+
+.Rating input:before
+  position: absolute
+  z-index: 1
+  content: ''
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+.Rating input:nth-of-type(2n):before
+  background: url(/img/Star.png) 0 0
+
+.Rating input:nth-of-type(2n-1):before
+  background: url(/img/Star.png) -9px 0
+
+.Rating:not(:hover) input:checked ~ input:nth-of-type(2n):before,
+.Rating input:hover ~ input:nth-of-type(2n):before
+  background: url(/img/Star.png) -19px 0
+
+.Rating:not(:hover) input:checked ~ input:nth-of-type(2n-1):before,
+.Rating input:hover ~ input:nth-of-type(2n-1):before
+  background: url(/img/Star.png) 100% 0

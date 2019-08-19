@@ -1,0 +1,47 @@
+@import "bourbon"
+@import "vars"
+
++font-face("Roboto", "/font/RobotoLight/RobotoLight", 300, $file-formats: woff)
++font-face("Roboto", "/font/RobotoRegular/RobotoRegular", 400, $file-formats: woff)
++font-face("Roboto", "/font/RobotoMedium/RobotoMedium", 500, $file-formats: woff)
++font-face("FiraSans", "/font/FiraSansMedium/FiraSansMedium", 500, $file-formats: woff)
+
+*
+  outline: none
+
+a, p, h1, sup, span
+  color: inherit
+  font-weight: inherit
+
+sup
+  font-size: 60%
+
+b
+  font-weight: 600
+
+svg
+  fill: currentColor
+
+html
+  overflow: hidden
+
+body
+  margin: 0
+  padding: 0
+  background-color: #EDEFF1
+  font-family: $font-default
+  font-size: 16px
+  font-weight: 400
+  color: #2C2F32
+
+.fonts-stage-1 body
+  font-family: $webfont-default
+
+.Container
+  max-width: 1280px
+  min-width: 1280px
+  padding-right: 20px
+  padding-left: 20px
+  margin-right: auto
+  margin-left: auto
+  box-sizing: border-box
